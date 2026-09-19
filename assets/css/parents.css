@@ -50,3 +50,26 @@ body.notice-open{overflow:hidden}
 .selection-upcoming>span{font-size:10px;color:#b53b18;font-weight:700}
 .selection-upcoming p{font-size:13px;line-height:1.8;margin-top:6px}
 .selection-upcoming strong{font-size:15px;color:var(--ink)}
+
+/* Pro-player mentoring: a distinct closing statement within the mental data card. */
+.mental-reference .mental-mentor{margin-top:18px;padding-top:16px;border-top:2px solid var(--orange);font-size:clamp(21px,6vw,26px);line-height:1.4;letter-spacing:-.045em}
+.mental-reference .mental-mentor strong{font-size:inherit;line-height:inherit;font-weight:800;color:#b53b18}
+
+/* Mental page: statement, evidence, then mentoring, with consistent mobile rhythm. */
+#mental #title-mental{font-size:clamp(25px,7.3vw,30px);line-height:1.35;margin:20px 0 15px;letter-spacing:-.045em}
+#mental>.lead{font-size:14px;line-height:1.8}
+#mental .mental-reference{margin-top:22px;padding:20px;border:1px solid #e9e5f3;border-radius:18px;background:#f5f3fa;overflow:hidden}
+#mental .mental-stat{display:flex;align-items:center;gap:17px;margin:12px 0 16px}
+#mental .mental-stat>strong{font-size:40px;line-height:1.1;white-space:nowrap}
+#mental .mental-stat>strong>span{font-size:13px;margin-left:5px}
+#mental .mental-stat>p{font-size:11px;line-height:1.6;margin:0;padding-left:16px;border-left:1px solid #d8d2e7;color:#64558a}
+#mental .mental-copy-part{display:block;font-size:13px;line-height:1.8}
+#mental .mental-copy-part+.mental-copy-part{margin-top:9px}
+#mental .mental-copy-part b{font-weight:700;color:var(--ink)}
+#mental .mental-mentor{margin:19px -20px -20px;padding:17px 20px;border:0;background:var(--ink);font-size:clamp(19px,5.6vw,23px);line-height:1.4}
+#mental .mental-mentor strong{color:#fff;font-weight:800;display:block;border-left:3px solid var(--orange);padding-left:12px}
+#mental .report{margin-top:20px}
+@media(max-width:359px){#mental .mental-reference{padding:17px}#mental .mental-stat{gap:11px}#mental .mental-stat>strong{font-size:35px}#mental .mental-stat>p{padding-left:11px}#mental .mental-mentor{margin:17px -17px -17px;padding:16px 17px}}
+
+.cover-mission>span{display:block;font-size:13px;font-weight:400;color:#000}
+.cover-mission>strong{display:block;font-size:13px;font-weight:700;color:#000;line-height:inherit;letter-spacing:inherit}
