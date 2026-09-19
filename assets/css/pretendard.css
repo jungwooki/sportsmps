@@ -52,12 +52,12 @@ blockquote{margin-top:19px;font-size:14px;line-height:1.7}
 .signal-row small{font-size:11px}
 details{margin-top:12px}
 summary{font-size:14px;min-height:48px}
-.arts-visual{height:205px;margin:20px 0;padding:26px}
-.arts-visual>div{font-size:27px}
+.general-visual{height:205px;margin:20px 0;padding:26px}
+.general-visual>div{font-size:27px}
 .body-copy{font-size:14px;line-height:1.7}
-.arts-points{margin-top:14px}
-.arts-points>div{padding:11px 0}
-.arts-points p{font-size:12px;line-height:1.65}
+.general-points{margin-top:14px}
+.general-points>div{padding:11px 0}
+.general-points p{font-size:12px;line-height:1.65}
 .journey-list{margin-top:24px}
 .journey-list li{padding-bottom:21px}
 .journey-list h3{font-size:17px;margin:6px 0}
