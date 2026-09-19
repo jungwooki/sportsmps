@@ -56,3 +56,11 @@ README.md
 - 이전 HTML과 미사용 원본 사진은 업로드 폴더 밖의 guide 참고자료 폴더로 옮겨 보관했습니다.
 - 실제 사용하는 파일만 남기고 CSS·JS·폰트·이미지를 종류별로 정리했습니다.
 - 모든 로컬 HTML·CSS 참조와 사용 자산을 검사했고, 320·390·430·1440px Chrome 화면에서 이미지 로드·레이아웃·목차·리포트/가격/상담 모달을 확인했습니다.
+
+## Pretendard 모바일 버전
+
+- `index.html`: 기존 A2Z 디자인.
+- `index-pretendard.html`: 같은 내용·기능에 Pretendard를 적용한 모바일 대안.
+- `assets/css/pretendard.css`: 대안 버전에서만 불러오는 글꼴·크기·행간·여백 설정. 큰 제목을 줄이고 본문과 터치 영역은 읽고 누르기 편한 크기로 유지합니다.
+- `assets/fonts/PretendardVariable.woff2`: 로컬 가변 폰트. 배포 라이선스는 `Pretendard-OFL.txt`에 포함했습니다.
+- 두 HTML은 같은 CSS·JS·이미지를 공유합니다. 본문 내용을 변경할 때는 두 HTML에 함께 반영해 주세요.
