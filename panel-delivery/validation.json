@@ -1,0 +1,50 @@
+{
+  "fonts": [
+    {
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "weight": "500",
+      "status": "loaded"
+    },
+    {
+      "weight": "700",
+      "status": "loaded"
+    },
+    {
+      "weight": "800",
+      "status": "loaded"
+    }
+  ],
+  "poster": {
+    "x": 50,
+    "y": 85,
+    "width": 1000,
+    "height": 1415,
+    "top": 85,
+    "right": 1050,
+    "bottom": 1500,
+    "left": 50
+  },
+  "footer": {
+    "x": 95,
+    "y": 1278.328125,
+    "width": 910,
+    "height": 190.796875,
+    "top": 1278.328125,
+    "right": 1005,
+    "bottom": 1469.125,
+    "left": 95
+  },
+  "brokenImages": [],
+  "overflow": [],
+  "jsErrors": [],
+  "editing": "pass",
+  "save": "pass",
+  "mobileWidths": [
+    320,
+    390,
+    768
+  ]
+}

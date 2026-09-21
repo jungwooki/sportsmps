@@ -73,3 +73,6 @@ body.notice-open{overflow:hidden}
 
 .cover-mission>span{display:block;font-size:13px;font-weight:400;color:#000}
 .cover-mission>strong{display:block;font-size:13px;font-weight:700;color:#000;line-height:inherit;letter-spacing:inherit}
+
+.country-flag-pair{display:flex;gap:5px;align-items:center;flex-shrink:0}
+.netherlands-flag{background:linear-gradient(to bottom,#ae1c28 33.33%,#fff 33.33%,#fff 66.66%,#21468b 66.66%)}

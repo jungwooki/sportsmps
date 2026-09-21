@@ -1,0 +1,5 @@
+/* A2Z page titles share the mental page's responsive font size. */
+.page>h2,
+.europe-page>h2,
+.cover #title-intro,
+#mental #title-mental{font-size:clamp(23px,6.57vw,27px)}
