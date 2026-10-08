@@ -12,6 +12,7 @@
     const marker = Math.min(innerHeight * .35, 230);
     current = 0;
     pages.forEach((page, index) => { if (page.getBoundingClientRect().top <= marker) current = index; });
+    pages.forEach((page, index) => page.classList.toggle('page-entering', index === current && !reducedMotion.matches));
     document.querySelector('#page-number').textContent = String(current + 1).padStart(2, '0');
     document.querySelector('#page-name').textContent = pages[current].dataset.title;
     document.querySelector('#reading-progress').style.width = `${(current + 1) / pages.length * 100}%`;

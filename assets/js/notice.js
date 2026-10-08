@@ -2,7 +2,9 @@
   const notice = document.querySelector('#selection-notice');
   if (!notice) return;
   const previousFocus = document.activeElement;
-  notice.querySelector('.selection-close').addEventListener('click', () => notice.close());
+  for (const button of notice.querySelectorAll('.selection-close, .notice-enter')) {
+    button.addEventListener('click', () => notice.close());
+  }
   notice.addEventListener('close', () => {
     document.body.classList.remove('notice-open');
     const target = previousFocus instanceof HTMLElement && previousFocus !== document.body

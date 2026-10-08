@@ -78,3 +78,45 @@
     });
   });
 })();
+
+// Each consultation report keeps every page available as a full image.
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  for (const gallery of document.querySelectorAll('[data-report-gallery]')) {
+    const track = gallery.querySelector('.report-page-track');
+    const pages = [...track.children];
+    const previous = gallery.querySelector('[data-report-prev]');
+    const next = gallery.querySelector('[data-report-next]');
+    const position = gallery.querySelector('[data-report-position]');
+    let active = 0;
+    let queued = false;
+    function update() {
+      if (!track.clientWidth) return;
+      active = Math.max(0, Math.min(pages.length - 1, Math.round(track.scrollLeft / track.clientWidth)));
+      previous.disabled = active === 0;
+      next.disabled = active === pages.length - 1;
+      position.textContent = `${active + 1} / ${pages.length}`;
+    }
+    function move(index) {
+      const target = Math.max(0, Math.min(pages.length - 1, index));
+      track.scrollTo({left: target * track.clientWidth, behavior: reduced.matches ? 'instant' : 'smooth'});
+    }
+    previous.addEventListener('click', () => move(active - 1));
+    next.addEventListener('click', () => move(active + 1));
+    track.addEventListener('scroll', () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => { queued = false; update(); });
+    }, {passive: true});
+    track.addEventListener('keydown', event => {
+      const target = {ArrowLeft: active - 1, ArrowRight: active + 1, Home: 0, End: pages.length - 1}[event.key];
+      if (target === undefined) return;
+      event.preventDefault();
+      move(target);
+    });
+    new ResizeObserver(() => {
+      if (track.clientWidth) track.scrollTo({left: active * track.clientWidth, behavior: 'instant'});
+    }).observe(track);
+    update();
+  }
+})();

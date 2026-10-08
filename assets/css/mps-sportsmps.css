@@ -76,3 +76,8 @@ body.notice-open{overflow:hidden}
 
 .country-flag-pair{display:flex;gap:5px;align-items:center;flex-shrink:0}
 .netherlands-flag{background:linear-gradient(to bottom,#ae1c28 33.33%,#fff 33.33%,#fff 66.66%,#21468b 66.66%)}
+
+.selection-patent{padding:0 16px 18px;margin-top:-6px}
+.selection-patent>span{font-size:10px;color:#b53b18;font-weight:700}
+.selection-patent p{font-size:13px;line-height:1.8;margin-top:6px}
+.selection-patent strong{color:var(--ink)}
