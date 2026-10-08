@@ -53,3 +53,8 @@ html:has(body.menu-open),html:has(body.quick-open),html:has(body.samples-open),h
 @media(max-width:359px){.price-tiers{gap:12px}.price-tiers>div+div{padding-left:12px}.price-tiers strong{font-size:31px}}
 
 .pricing-tax{display:inline-block;margin-top:12px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:11px;font-weight:600}
+
+.selection-notice .notice-award h2{font-size:21px;line-height:1.5;word-break:keep-all}.notice-local-top>span:first-child{font-size:12px}.local-with{color:var(--muted);font-size:11px;font-weight:400;white-space:nowrap}.notice-local h3{margin-top:13px;font-size:19px;line-height:1.55}.notice-enter .notice-enter-copy{min-width:0;font-size:13px;text-align:left}.notice-enter-copy>strong{display:block;font-size:13px;color:inherit;font-weight:750;line-height:1.55;letter-spacing:-.04em}.notice-enter-copy>small{display:block;font-size:10px;opacity:.8;font-weight:400;line-height:1.5;margin-top:4px}#why-mps{scroll-margin-top:12px}
+@media(max-width:359px){.selection-notice .notice-award h2{font-size:18px}.notice-enter-copy>strong{font-size:12px}.notice-local h3{font-size:17px}}
+
+.selection-notice .notice-award h2{margin-top:15px}.notice-grade{margin:18px auto 0}
