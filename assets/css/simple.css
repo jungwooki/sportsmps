@@ -4,3 +4,9 @@
 .cover{padding-top:28px}.cover .eyebrow{font-size:11px;color:var(--orange);letter-spacing:.02em}.cover .cover-foundation{font-size:15px}.cover .cover-banding{margin-top:clamp(90px,13svh,120px)}.cover .cover-doctor{margin-top:16px}.cover::before{max-height:76%}
 
 body.notice-open .compact-dock{visibility:hidden}
+
+/* Final concise guide: usable report chart and folded location details. */
+#use h2 em{font-size:clamp(22px,6.4vw,31px)}#start h2{font-size:clamp(24px,7vw,32px)}.simple-centers{margin-top:20px;border:1px solid var(--line);border-radius:14px;padding:0 14px;background:var(--surface)}.simple-centers summary{font-size:13px;flex-wrap:wrap;gap:8px}.simple-centers summary>span{font-size:10px;color:var(--muted);margin-left:auto}.center-links{padding:0 0 14px;display:grid;gap:14px}.center-links article{padding-top:14px;border-top:1px solid var(--line)}.center-links h3{font-size:14px;margin:0 0 4px}.center-links p{font-size:11px;color:var(--muted)}.center-links .outline-button{min-height:42px;font-size:11px;margin-top:10px}.idp-details summary{font-size:12px}.idp-details p{font-size:12px;line-height:1.8}.result-phone:focus-visible{outline:2px solid var(--orange);outline-offset:4px}.legal{margin-top:20px}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+/* Page 02 explains the model rather than repeating the cover illustration. */
+#why h2 em{font-size:clamp(24px,6.8vw,32px)}.why-triangle{margin-top:30px;height:290px}.triangle-center{position:absolute;top:136px;left:50%;transform:translate(-50%,-50%);text-align:center;font-size:27px;line-height:1.3;width:150px}.triangle-center em{display:block;color:var(--orange);font-size:23px}.why-triangle .node-s{top:-4px}.why-triangle .node-m,.why-triangle .node-p{bottom:8px}#why .shorts-details{margin-top:26px}
