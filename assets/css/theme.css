@@ -58,3 +58,6 @@ html:has(body.menu-open),html:has(body.quick-open),html:has(body.samples-open),h
 @media(max-width:359px){.selection-notice .notice-award h2{font-size:18px}.notice-enter-copy>strong{font-size:12px}.notice-local h3{font-size:17px}}
 
 .selection-notice .notice-award h2{margin-top:15px}.notice-grade{margin:18px auto 0}
+
+/* Make age-group variation and maturity grouping readable at mobile size. */
+.maturity-diagram{padding:14px 10px;gap:12px}.maturity-diagram b{font-size:12px;font-weight:750;color:var(--ink)}.maturity-diagram>strong{color:var(--muted)}.dot-players{height:48px;gap:8px;margin:8px 0 2px}.dot-players i{width:14px}.dot-players i:before{width:9px;height:9px;left:2.5px;top:-12px}.mixed i:nth-child(1){height:21px;background:#81ce82}.mixed i:nth-child(2){height:34px;background:#ff7979}.mixed i:nth-child(3){height:27px;background:#f3d46f}.mixed i:nth-child(4){height:17px;background:#81ce82}.matched i{height:27px;background:var(--teal)}:root[data-theme="light"] .mixed i:nth-child(1),:root[data-theme="light"] .mixed i:nth-child(4){background:#348247}:root[data-theme="light"] .mixed i:nth-child(2){background:#df514d}:root[data-theme="light"] .mixed i:nth-child(3){background:#dfa91c}.europe-card .growth-opportunity{line-height:1.8}.europe-card .early-growth{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
