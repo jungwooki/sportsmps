@@ -2,27 +2,22 @@
   const notice = document.querySelector('#selection-notice');
   if (!notice) return;
   const previousFocus = document.activeElement;
-  let showShorts = false;
+  const player = notice.querySelector('#notice-shorts-player');
+  const play = notice.querySelector('#notice-shorts-play');
   notice.querySelector('.selection-close').addEventListener('click', () => notice.close());
-  notice.querySelector('.notice-enter')?.addEventListener('click', () => {
-    showShorts = true;
-    notice.close();
+  play?.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.src = 'https://www.youtube-nocookie.com/embed/2czTwDPOxnk?autoplay=1&playsinline=1&rel=0';
+    frame.title = 'MPS 프로젝트는 왜 시작했나요? · 유튜브 쇼츠';
+    frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    frame.allowFullscreen = true;
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    player.replaceChildren(frame);
+    frame.focus({preventScroll: true});
   });
   notice.addEventListener('close', () => {
     document.body.classList.remove('notice-open');
-    if (showShorts) {
-      const video = document.querySelector('#why-mps');
-      const play = document.querySelector('#bio-shorts-play');
-      if (video) {
-        play?.focus({preventScroll: true});
-        requestAnimationFrame(() => video.scrollIntoView({
-          behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
-          block: 'start'
-        }));
-        showShorts = false;
-        return;
-      }
-    }
+    if (player && play) player.replaceChildren(play);
     const target = previousFocus instanceof HTMLElement && previousFocus !== document.body
       ? previousFocus : document.querySelector('.topbar > a');
     target?.focus({preventScroll: true});
