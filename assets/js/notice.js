@@ -8,7 +8,7 @@
   play?.addEventListener('click', () => {
     const frame = document.createElement('iframe');
     frame.src = 'https://www.youtube-nocookie.com/embed/2czTwDPOxnk?autoplay=1&playsinline=1&rel=0';
-    frame.title = 'MPS 프로젝트는 왜 시작했나요? · 유튜브 쇼츠';
+    frame.title = '좋아하는 것을, 오래도록. · 아이들의 꿈을 위한 MPS의 시작';
     frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
     frame.allowFullscreen = true;
     frame.referrerPolicy = 'strict-origin-when-cross-origin';

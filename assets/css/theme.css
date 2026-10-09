@@ -76,3 +76,14 @@ html:has(body.menu-open),html:has(body.quick-open),html:has(body.samples-open),h
 
 /* Company identity and supplied service notice at the end of the guide. */
 .company-footer .company-name{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:9px}.company-footer .company-details p{line-height:1.9}.company-footer .company-details strong{font-size:10px;color:var(--body);font-weight:600}.company-footer .company-copyright{margin-top:10px}.company-footer .company-copyright strong{font-size:9px}.company-footer .service-notice{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}.company-footer .service-notice h3{font-size:12px;font-weight:700;letter-spacing:-.025em;margin-bottom:10px}.company-footer .service-notice p{font-size:10px;line-height:1.9;margin-bottom:9px;color:var(--muted)}.company-footer .service-notice p:last-child{margin-bottom:0}
+
+/* Preserve the deleted introduction as breathing room in the first screen. */
+.cover .cover-platform{max-width:320px;line-height:1.8}.cover .cover-doctor{margin-top:clamp(110px,16svh,150px)}.cover>.cover-doctor,.cover>.cover-passport{flex-shrink:0}
+
+/* Shared transparent glass for the domain and lower-right menus. */
+.domain-shortcuts,.floating-actions{--glass-fill:#19191938;--glass-shine:#ffffff10;--glass-fade:#ffffff02;--glass-border:#ffffff4d;--glass-edge:#ffffff2e;--glass-hover:#19191966}
+:root[data-theme="light"] .domain-shortcuts,:root[data-theme="light"] .floating-actions{--glass-fill:#ffffff30;--glass-shine:#ffffff55;--glass-fade:#ffffff0d;--glass-border:#a6aab866;--glass-edge:#ffffffb3;--glass-hover:#ffffff80}
+.domain-shortcuts a,.floating-actions{background:linear-gradient(145deg,var(--glass-shine),var(--glass-fade)),var(--glass-fill);border:1px solid var(--glass-border);backdrop-filter:blur(10px) saturate(135%);-webkit-backdrop-filter:blur(10px) saturate(135%);box-shadow:inset 0 1px 0 var(--glass-edge),0 4px 14px #00000014}
+.domain-shortcuts a:hover,.domain-shortcuts a[aria-current="location"]{background:var(--glass-hover);border-color:currentColor}
+.floating-actions>.sample-fab,.floating-actions .price-action{background:transparent;border-color:transparent}.floating-actions>.sample-fab:hover,.floating-actions .price-action:hover{background:var(--glass-hover)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.domain-shortcuts a,.floating-actions{background:var(--surface)}}
