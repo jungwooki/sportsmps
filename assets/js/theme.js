@@ -1,5 +1,5 @@
 (() => {
-  const key = 'mps-sportsmps-theme';
+  const key = 'mps-sportsmps2-theme';
   let theme = 'dark';
   try {
     const saved = localStorage.getItem(key);
