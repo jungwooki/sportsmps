@@ -2,3 +2,5 @@
 
 /* Familiar parent-facing cover, with space for the field photo. */
 .cover{padding-top:28px}.cover .eyebrow{font-size:11px;color:var(--orange);letter-spacing:.02em}.cover .cover-foundation{font-size:15px}.cover .cover-banding{margin-top:clamp(90px,13svh,120px)}.cover .cover-doctor{margin-top:16px}.cover::before{max-height:76%}
+
+body.notice-open .compact-dock{visibility:hidden}
