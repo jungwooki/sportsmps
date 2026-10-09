@@ -2,8 +2,8 @@
   const dialog = document.querySelector('#sample-dialog');
   const opener = document.querySelector('#sample-open');
   const viewer = document.querySelector('#sample-viewer');
-  const tabs = [...dialog.querySelectorAll('[role="tab"]')];
-  const panels = [...dialog.querySelectorAll('[role="tabpanel"]')];
+  const tabs = [...dialog.querySelectorAll('#mobile-preview [role="tab"]')];
+  const panels = [...dialog.querySelectorAll('#sample-viewer [role="tabpanel"]')];
   const previous = document.querySelector('#sample-prev');
   const next = document.querySelector('#sample-next');
   const names = ['멘탈', '피지컬', '성장'];
@@ -66,17 +66,37 @@
     requestAnimationFrame(() => { if (viewer.clientWidth) select(Math.max(0, Math.min(2, Math.round(viewer.scrollLeft / viewer.clientWidth)))); queued = false; });
   }, {passive:true});
   addEventListener('resize', () => { if (dialog.open && !document.querySelector('#mobile-preview').hidden) move(active); });
-  const formats = ['mobile', 'pdf'];
-  formats.forEach(format => {
-    document.querySelector('#format-' + format).addEventListener('click', () => {
-      formats.forEach(name => {
-        document.querySelector('#format-' + name).setAttribute('aria-pressed', String(name === format));
-        document.querySelector('#' + name + '-preview').hidden = name !== format;
+  function bindTabGroup(buttons, onSelect) {
+    function choose(index) {
+      buttons.forEach((button, i) => {
+        const selected = i === index;
+        button.setAttribute('aria-selected', String(selected));
+        button.tabIndex = selected ? 0 : -1;
+        document.getElementById(button.getAttribute('aria-controls')).hidden = !selected;
       });
-      dialog.scrollTo({top:0, behavior:'instant'});
-      if (format === 'mobile') move(active);
+      onSelect?.(buttons[index]);
+    }
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', () => choose(index));
+      button.addEventListener('keydown', event => {
+        let target;
+        if (event.key === 'ArrowRight') target = (index + 1) % buttons.length;
+        if (event.key === 'ArrowLeft') target = (index + buttons.length - 1) % buttons.length;
+        if (event.key === 'Home') target = 0;
+        if (event.key === 'End') target = buttons.length - 1;
+        if (target !== undefined) {
+          event.preventDefault();
+          choose(target);
+          buttons[target].focus();
+        }
+      });
     });
+  }
+  bindTabGroup([...dialog.querySelectorAll('[data-format-tab]')], button => {
+    dialog.scrollTo({top: 0, behavior: 'instant'});
+    if (button.id === 'format-mobile') move(active);
   });
+  bindTabGroup([...dialog.querySelectorAll('[data-advanced-tab]')]);
 })();
 
 // Each consultation report keeps every page available as a full image.

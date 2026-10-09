@@ -93,3 +93,6 @@ html:has(body.menu-open),html:has(body.quick-open),html:has(body.samples-open),h
 
 /* Separate the transparent report and price buttons with a subtle outline. */
 .floating-actions>.sample-fab,.floating-actions .price-action{border:1px solid var(--glass-border);border-radius:9px}.floating-actions .price-action:before{display:none}.floating-secondary{gap:5px}.floating-actions>.sample-fab:hover,.floating-actions .price-action:hover{border-color:var(--muted)}
+
+/* Three report formats, with a separate three-domain advanced report selector. */
+.report-format{gap:8px;border-color:var(--line)}.report-format>button{font-size:12px;white-space:nowrap;padding:0 2px 10px}.report-format>button[aria-selected="true"]{color:var(--orange);border-bottom-color:var(--orange);font-weight:750}.advanced-report-panel{margin:0 23px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px}.advanced-report-panel .report-gallery{margin-top:0}#advanced-preview .pdf-intro{padding-bottom:16px}#standard-preview .consult-report{padding:16px}#sample-dialog [role="tabpanel"][hidden]{display:none}@media(max-width:359px){.advanced-report-panel{margin:0 16px;padding:12px}#standard-preview .consult-report{margin-left:16px;margin-right:16px;padding:12px}.report-format>button{font-size:11px}.report-gallery h4{font-size:12px}}
