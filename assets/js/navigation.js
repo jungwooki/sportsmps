@@ -22,6 +22,10 @@
       if (index === current) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
+    document.querySelectorAll('.domain-shortcuts a').forEach(link => {
+      if (link.getAttribute('href') === `#${pages[current].id}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
     queued = false;
   }
   function setMenu(open, restoreFocus = false) {
