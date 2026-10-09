@@ -87,3 +87,9 @@ html:has(body.menu-open),html:has(body.quick-open),html:has(body.samples-open),h
 .domain-shortcuts a:hover,.domain-shortcuts a[aria-current="location"]{background:var(--glass-hover);border-color:currentColor}
 .floating-actions>.sample-fab,.floating-actions .price-action{background:transparent;border-color:transparent}.floating-actions>.sample-fab:hover,.floating-actions .price-action:hover{background:var(--glass-hover)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.domain-shortcuts a,.floating-actions{background:var(--surface)}}
+
+/* Keep the opening dialog near two-thirds of the screen height. */
+.video-notice{max-height:67dvh;width:calc(100% - 48px);max-width:340px;padding:16px;overflow-y:auto;overscroll-behavior:contain}.video-notice .notice-identity{margin-bottom:10px;min-height:24px}.video-notice .notice-identity img{width:60px}.video-notice h2{font-size:21px;line-height:1.4;margin-bottom:5px}.video-notice>p{font-size:11px;margin-bottom:12px}.video-notice .selection-close{top:8px;right:8px}.video-notice .shorts-player{width:min(100%,190px,calc((67dvh - 245px)*.5625));min-width:90px}.video-notice .shorts-play-icon{width:44px;height:44px;font-size:17px}.video-notice .shorts-play-label{font-size:10px;bottom:12px}.video-notice .shorts-youtube{min-height:30px;margin-top:4px}.video-notice .notice-support{margin-top:6px;padding-top:8px;gap:7px}.video-notice .notice-support-title{font-size:10px}
+
+/* Separate the transparent report and price buttons with a subtle outline. */
+.floating-actions>.sample-fab,.floating-actions .price-action{border:1px solid var(--glass-border);border-radius:9px}.floating-actions .price-action:before{display:none}.floating-secondary{gap:5px}.floating-actions>.sample-fab:hover,.floating-actions .price-action:hover{border-color:var(--muted)}
